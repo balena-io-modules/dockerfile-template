@@ -1,0 +1,30 @@
+{
+  "name": "dockerfile-template",
+  "version": "0.0.1",
+  "description": "Format for preprocessing dockerfiles",
+  "main": "lib.coffee",
+  "bin": "./dockerfile-template",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:resin-io/dockerfile-template"
+  },
+  "author": "Aleksis Brezas <abresas@resin.io>",
+  "license": "Apache-2.0",
+  "scripts": {
+    "pretest": "./node_modules/.bin/coffeelint lib.coffee dockerfile-template.coffee ./test",
+    "test": "./node_modules/mocha/bin/mocha --compilers coffee:coffee-script/register",
+    "prepublish": "./node_modules/.bin/coffee -c lib.coffee dockerfile-template.coffee && (echo '#!/usr/bin/env node' | cat - dockerfile-template.js > dockerfile-template)"
+  },
+  "dependencies": {
+    "bluebird": "^2.10.1",
+    "commander": "^2.8.1",
+    "errno": "^0.1.4",
+    "lodash.template": "~3.6.2"
+  },
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "coffee-script": "^1.10.0",
+    "coffeelint": "^1.12.1",
+    "mocha": "^2.3.3"
+  }
+}
