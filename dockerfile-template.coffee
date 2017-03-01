@@ -17,8 +17,13 @@ define = (def, defs) ->
 program
 .usage('[options]')
 .version(require('./package.json').version)
-.option('-f, --filename <templatefile>', 'template file to process (default: Dockerfile.template)', 'Dockerfile.template')
-.option('-d, --define [VARIABLE=value]', 'replace variable with value (repeatable option)', define, {})
+.option '-f, --filename <templatefile>',
+	'template file to process (default: Dockerfile.template)',
+	'Dockerfile.template'
+.option '-d, --define [VARIABLE=value]',
+	'replace variable with value (repeatable option)',
+	define,
+	{}
 .parse(process.argv)
 
 fs.readFileAsync(program.filename, 'utf-8')
