@@ -1,6 +1,6 @@
 {
   "name": "dockerfile-template",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Format for preprocessing dockerfiles",
   "main": "lib.js",
   "bin": "./dockerfile-template",
@@ -9,11 +9,17 @@
     "url": "git@github.com:resin-io/dockerfile-template"
   },
   "author": "Aleksis Brezas <abresas@resin.io>",
+  "contributors": [
+    {
+      "name": "Cameron Diver",
+      "email": "cameron@resin.io"
+    }
+  ],
   "license": "Apache-2.0",
   "scripts": {
-    "pretest": "coffeelint lib.coffee dockerfile-template.coffee ./test",
+    "pretest": "resin-lint lib.coffee dockerfile-template.coffee ./test",
     "test": "mocha --compilers coffee:coffee-script/register",
-    "prepublish": "gulp && (echo '#!/usr/bin/env node' | cat - dockerfile-template.js > dockerfile-template)"
+    "prepublish": "gulp"
   },
   "dependencies": {
     "bluebird": "^2.10.1",
@@ -28,6 +34,7 @@
     "gulp": "^3.9.1",
     "gulp-coffee": "^2.3.3",
     "gulp-util": "^3.0.8",
-    "mocha": "^2.3.3"
+    "mocha": "^2.3.3",
+    "resin-lint": "^1.4.0"
   }
 }
