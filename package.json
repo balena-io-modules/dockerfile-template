@@ -19,7 +19,8 @@
   "scripts": {
     "pretest": "resin-lint lib.coffee dockerfile-template.coffee ./test",
     "test": "mocha --compilers coffee:coffee-script/register",
-    "prepublish": "gulp"
+    "prepublish": "require-npm4-to-publish",
+    "prepublishOnly": "npm test && gulp"
   },
   "dependencies": {
     "bluebird": "^2.10.1",
@@ -35,6 +36,7 @@
     "gulp-coffee": "^2.3.3",
     "gulp-util": "^3.0.8",
     "mocha": "^2.3.3",
+    "require-npm4-to-publish": "^1.0.0",
     "resin-lint": "^1.4.0"
   }
 }
