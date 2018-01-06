@@ -3,6 +3,7 @@
   "version": "0.0.2",
   "description": "Format for preprocessing dockerfiles",
   "main": "lib.js",
+  "types": "lib.d.ts",
   "bin": "./dockerfile-template",
   "repository": {
     "type": "git",
