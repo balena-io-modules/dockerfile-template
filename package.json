@@ -17,7 +17,7 @@
     "prepublish": "gulp && (echo '#!/usr/bin/env node' | cat - dockerfile-template.js > dockerfile-template)"
   },
   "dependencies": {
-    "bluebird": "^2.10.1",
+    "bluebird": "^3.5.3",
     "commander": "^2.8.1",
     "errno": "^0.1.4",
     "lodash.template": "~3.6.2"
