@@ -20,7 +20,7 @@
     "bluebird": "^3.5.3",
     "commander": "^2.8.1",
     "errno": "^0.1.4",
-    "lodash.template": "~3.6.2"
+    "lodash.template": "~4.5.0"
   },
   "devDependencies": {
     "chai": "^3.3.0",
