@@ -3,7 +3,6 @@ program = require 'commander'
 Promise = require 'bluebird'
 fs = Promise.promisifyAll(require 'fs')
 { errno } = require 'errno'
-util = require 'util'
 
 define = (def, defs) ->
 	match = def.match(/^([A-Z][A-Z_]+)=(.*)/)
