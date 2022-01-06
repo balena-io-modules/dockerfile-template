@@ -12,8 +12,8 @@ gulp.task 'coffee', ->
 	.on('error', gutil.log)
 	.pipe(gulp.dest('.'))
 
-gulp.task 'build', [
+gulp.task 'build', gulp.series [
 	'coffee'
 ]
 
-gulp.task 'default', ['build']
+gulp.task 'default', gulp.series ['build']
