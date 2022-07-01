@@ -1,5 +1,7 @@
 # dockerfile-template
 
+**DEPRECATED -- This module has been deprecated; please use [balena-compose](https://github.com/balena-io-modules/balena-compose) instead.**
+
 Process dockerfile templates, a format that allows replacing variables in dockerfiles.
 
 ### Installation
