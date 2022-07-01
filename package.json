@@ -1,6 +1,6 @@
 {
   "name": "dockerfile-template",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Format for preprocessing dockerfiles",
   "main": "lib.js",
   "types": "lib.d.ts",
@@ -32,6 +32,6 @@
     "mocha": "^2.5.3"
   },
   "versionist": {
-    "publishedAt": "2022-01-06T16:09:51.485Z"
+    "publishedAt": "2022-07-01T14:23:34.188Z"
   }
 }
